@@ -37,10 +37,10 @@ app.post('/leitura', async (req,res) => {
         ]
 
         const [resultado] = await conexaoSQL.query(sql, valores)
-        res.status(500).json({ mensagem: 'Gravado com sucesso' });
+        res.status(201).json({ mensagem: 'Gravado com sucesso' });
     } catch (erro) {
         console.error('Erro ao salvar no banco:', erro);
-        res.status(500).json({ mensagem: 'Falha interna ao registrar leitura.' });
+        res.status(201).json({ mensagem: 'Falha interna ao registrar leitura.' });
     }
 })
 
