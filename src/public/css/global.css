@@ -1,0 +1,24 @@
+@import url(reset.css);
+@import url(../fonts/fonts.css);
+
+@import url(header.css);
+
+
+:root{
+    /* cores principais */
+    --main-background-color: #0B1628;
+    --gradiente-fundo-box: linear-gradient(135deg, #0F203F, #0b1629);
+    --color-box-static: #0f1f38;
+    --color-footer: #080F1E;
+
+    /* tamanho de fontes */
+    --weight-font-large: 800;
+    --weight-font-middle-large: 700;
+    --weight-font-middle: 600;
+    --weight-font-small: 400;
+
+    /* fontes */
+    --font-titulo: 'Outfit', sans-serif;
+    --font-compter: 'JetBrains Mono', sans-serif;
+    --font-text: 'Inter', sans-serif;
+}
