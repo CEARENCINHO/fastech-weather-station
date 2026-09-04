@@ -6,10 +6,10 @@
 
 :root{
     /* cores principais */
-    --main-background-color: #0B1628;
-    --gradiente-fundo-box: linear-gradient(135deg, #0F203F, #0b1629);
-    --color-box-static: #0f1f38;
-    --color-footer: #080F1E;
+    --color-bg-main: #0B1628;
+    --gradient-bg-color: linear-gradient(135deg, #0F203F, #0b1629);
+    --bg-card-color: #0f1f38;
+    --color-bg-footer: #080F1E;
 
     /* tamanho de fontes */
     --weight-font-large: 800;
@@ -18,7 +18,7 @@
     --weight-font-small: 400;
 
     /* fontes */
-    --font-titulo: 'Outfit', sans-serif;
-    --font-compter: 'JetBrains Mono', sans-serif;
-    --font-text: 'Inter', sans-serif;
+    --font-Ouyfit: 'Outfit', sans-serif;
+    --font-mono: 'JetBrains Mono', sans-serif;
+    --font-inter: 'Inter', sans-serif;
 }
