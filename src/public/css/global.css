@@ -10,6 +10,8 @@
     --gradient-bg-color: linear-gradient(135deg, #0F203F, #0b1629);
     --bg-card-color: #0f1f38;
     --color-bg-footer: #080F1E;
+    --color-yellow: #F97316;
+    --color-gray: #94A3B8;
 
     /* tamanho de fontes */
     --weight-font-large: 800;
@@ -18,7 +20,11 @@
     --weight-font-small: 400;
 
     /* fontes */
-    --font-Ouyfit: 'Outfit', sans-serif;
+    --font-Outfit: 'Outfit', sans-serif;
     --font-mono: 'JetBrains Mono', sans-serif;
     --font-inter: 'Inter', sans-serif;
+}
+
+body{
+    background-color: var(--color-bg-main);
 }
