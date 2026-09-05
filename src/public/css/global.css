@@ -2,6 +2,7 @@
 @import url(../fonts/fonts.css);
 
 @import url(header.css);
+@import url(introducao.css);
 
 
 :root{
@@ -13,6 +14,8 @@
     --color-yellow: #F97316;
     --color-gray: #94A3B8;
     --color-blue-light: #1BD3D1;
+    --color-blue-light-8: #1BD3D108;
+    --color-blue-light-25: #1BD3D125;
     --colot-bg-blue-light: #0D2538;
 
     /* tamanho de fontes */
@@ -65,10 +68,38 @@ body{
     header .principal{
         width: 93%;
     }
+
+    /* sessão introdução */
+    .introducao .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 32px;
+    }
+
+    .introducao .container .part-1{
+        width: 46%;
+    }
+
+    
+    .introducao .introducao-infor h1{
+        font-size: 52px;
+        line-height: 56px;
+    }
+
+    
+    .introducao .container .part-2{
+        margin: 0;
+    }
+
+    
 }
 
 @media (min-width: 1440px) {
-    header .principal{
+    header .principal, .introducao .container{
         width: 1216px;
+    }
+    .introducao .container{
+        margin: 0 auto;
     }
 }
