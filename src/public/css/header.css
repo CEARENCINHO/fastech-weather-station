@@ -1,10 +1,77 @@
-.principal{
+header{
+    /* border-bottom: 1px solid var(--color-gray); */
+}
+header .principal{
+    margin: 0 auto;
     width: 388px;
     height: 68px;
-    background-color: red;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0px;
+    position: relative;
+    box-sizing: border-box;
+    /* border-bottom: 1px solid var(--color-gray); */
 }
 
-.logo-projeto{
+
+/* logo e nome */
+header .principal .logo-img-name{
+    width: 168px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+header .principal .logo-img-name .logo-projeto{
     width: 36px;
-    /* height: 36px; */
+}
+header .principal .logo-img-name div h1{
+    font-family: var(--font-Outfit);
+    font-size: 14px;
+    line-height: 17.5px;
+    font-weight: var(--weight-font-middle-large);
+    color: #fff;
+}
+
+header .principal .logo-img-name div p{
+    font-family: var(--font-mono);
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0.8px;
+    font-weight: var(--weight-font-smell);
+    color: var(--color-yellow);
+}
+
+
+/* botão */
+header .principal .button-options{
+    width: 32px;
+    height: 42px;
+    border: 2px solid var(--color-gray);
+    background: none;
+    border-radius: 8px;
+}
+
+header .principal .button-options img {
+    width: 16px;
+}
+
+header .principal .navbar{
+    /* display: none; */
+    position: absolute;
+    top: 100%;
+    width: 98%;
+    border-bottom: 1px solid var(--color-gray);
+}
+header .principal .navbar a{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 16px;
+    color: var(--color-gray);
+    font-family: var(--font-inter);
+    font-weight: var(--weight-font-smell);
+    line-height: 20px;
+    text-decoration: none;
+    font-size: 14px;
 }
