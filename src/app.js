@@ -12,8 +12,8 @@ app.post('/leitura', async (req,res) => {
             umidade,
             pressao,
             velocidade_vento,
-            direcao_vento,
-            luminosidade,
+            direcao_vento,//pn
+            luminosidade,//n
             condicao_ceu
         } = req.body
 
