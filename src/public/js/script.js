@@ -16,3 +16,13 @@ btMenu.addEventListener('click', () => {
     
 })
 
+// ===========================================
+//                 hora na infor-tempo
+// ===========================================
+
+const hora = document.querySelector('#hora')
+const data = new Date()
+
+const dataFormatada = data.toLocaleDateString('pt-BR')
+console.log(dataFormatada)
+hora.textContent = ` ${dataFormatada}`
