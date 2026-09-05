@@ -8,6 +8,9 @@
 
 .introducao .container{
     padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 .introducao .introducao-infor h1{
     font-family: var(--font-Outfit);
@@ -33,41 +36,147 @@
     font-weight: var(--weight-font-smell);
     margin-bottom: 32px;
 }
-.introducao .container .button{
+.introducao .container .part-1 .button{
     display: flex;
     gap: 12px;
 }
-.introducao .container .button .button-link{
+.introducao .container .part-1 .button .button-link{
     padding: 12px 24px;
     font-family: var(--font-inter);
     font-weight: var(--weight-font-middle);
     border-radius: 10px;
 }
 
-.introducao .container .button .button-yellow{
+.introducao .container .part-1 .button .button-yellow{
     background-color: var(--color-yellow);
     border: none;
     box-shadow: 0px 0px 95px -16px rgba(249,115,22,0.91);
     -webkit-box-shadow: 0px 0px 95px -16px rgba(249,115,22,0.91);
     -moz-box-shadow: 0px 0px 95px -16px rgba(249,115,22,0.91);
 }
-.introducao .container .button .button-yellow a{
+.introducao .container .part-1 .button .button-yellow a{
     color: #fff;
 }
 
 
-.introducao .container .button .button-blue{
+.introducao .container .part-1 .button .button-blue{
     border: 1px solid var(--color-blue-light-25);
     background-color: var(--color-blue-light-8);
 }
 
-.introducao .container .button .button-blue a{
+.introducao .container .part-1 .button .button-blue a{
     color: var(--color-blue-light);
     
 }
 
-.introducao .container .button .button-link a{
+.introducao .container .part-1 .button .button-link a{
     text-decoration: none;
     font-size: 14px;
     line-height: 20px;
+}
+
+
+.introducao .container .part-2 {
+    background: var(--gradient-bg-color);
+    padding: 24px;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.15), 0 0 40px rgba(34, 211, 238, 0.05);
+    border: 1px solid rgba(34, 211, 238, 0.2);
+    width: 380px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+.introducao .container .part-2 .infor-tempo .infor-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+
+.introducao .container .part-2 .infor-tempo .infor-header .weather{
+    font-size: 36px;
+}
+
+.introducao .container .part-2 .infor-tempo .infor-header .cidade-hora .city{
+    font-family: var(--font-mono);
+    color: var(--color-blue-light);
+    font-size: 11px;
+    line-height: 16.8px;
+    letter-spacing: 1.68px;
+}
+
+.introducao .container .part-2 .infor-tempo .infor-header .cidade-hora .agora{
+    display: flex;
+    color: #fff;
+    font-family: var(--font-Outfit);
+    font-size: 15px;
+    font-weight: var(--weight-font-smell);
+    line-height: 22.8px;
+}
+
+
+.introducao .container .part-2 .tempo{
+    text-align: center;
+    padding: 16px 0;
+}
+
+.introducao .container .part-2 .tempo .temp{
+    color: var(--color-yellow);
+    font-family: var(--font-mono);
+    font-size: 80px;
+    font-weight: var(--weight-font-middle);
+}
+
+
+.introducao .container .part-2 .tempo p{
+    color: #64748B;
+    font-size: 14px;
+    line-height: 20.4px;
+    font-family: var(--font-inter);
+    font-weight: var(--weight-font-smell);
+    margin-top: 4px;
+}
+.introducao .container .part-2 .card-metricas{
+    display: flex;
+    gap: 6px;
+    
+    
+}
+
+.introducao .container .part-2 .card-metricas .metrica-card{
+    border: 1px solid rgba(34, 211, 238, 0.2);
+    padding: 12px 0;
+    background-color: var(--color-blue-light-8);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 16px;
+
+}
+
+
+.introducao .container .part-2 .card-metricas .metrica-card .metrica-icone span{
+    font-size: 19px;
+    line-height: 28.8px;
+}
+
+.introducao .container .part-2 .card-metricas .metrica-card .metrica-valor{
+    font-size: 13px;
+    font-weight: var(--weight-font-middle);
+    font-family: var(--font-mono);
+    color: var(--color-blue-light);
+    line-height: 19.2px;
+}
+
+
+.introducao .container .part-2 .card-metricas .metrica-card .metrica-rotulo{
+    font-size: 10px;
+    font-weight: var(--weight-font-smell);
+    line-height: 15.6px;
+    color: var(--color-gray);
 }
