@@ -34,20 +34,74 @@
     </header>
     <section class="introducao">
         <div class="container">
-            <div class="introducao-infor">
-                <h1>Estação <span class="font-blue">Meteorológica</span> <span class="font-yellow">FASTECH</span></h1>
-                <p>Monitoramento contínuo e coleta de dados meteorológicos em tempo real. Temperatura, umidade, vento, precipitação e muito mais — diretamente do campus da FATEC Sinop.</p>
+            <div class="part-1">
+                <div class="introducao-infor">
+                    <h1>Estação <span class="font-blue">Meteorológica</span> <span class="font-yellow">FASTECH</span></h1>
+                    <p>Monitoramento contínuo e coleta de dados meteorológicos em tempo real. Temperatura, umidade, vento, precipitação e muito mais — diretamente do campus da FATEC Sinop.</p>
+                </div>
+    
+                <div class="button">
+                    <button class="button-link button-yellow">
+                        <a href="" >Ultima Medição</a>
+                    </button>
+                    <button class="button-link button-blue">
+                        <a href="" >Tabela</a>
+                    </button>
+                </div>
             </div>
 
-            <div class="button">
-                <button class="button-link button-yellow">
-                    <a href="" >Ultima Medição</a>
-                </button>
-                <button class="button-link button-blue">
-                    <a href="" >Tabela</a>
-                </button>
+            <div class="part-2">
+                <div class="infor-tempo">
+                    <div class="infor-header">
+                        <div class="cidade-hora">
+                            <p class="city">SINOP, MT</p>
+                            <div class="agora">
+                                <p>Agora -</p>
+                                <span id="hora"></span></div>
+                        </div>
+                        <span class="weather">⛅</span>
+                    </div>
+                </div>
+
+                <div class="tempo">
+                    <span class="temp">25.5º</span>
+                    <p>Temperatura atual</p>
+                </div>
+
+                <div class="card-metricas">
+                    <article class="metrica-card">
+                        <div class="metrica-icone">
+                            <span>💧</span>
+                        </div>
+
+                        <span class="metrica-valor" id="valor-umidade">78.4%</span>
+
+                        <span class="metrica-rotulo">Umidade</span>
+                    </article>
+
+                    <article class="metrica-card">
+                        <div class="metrica-icone">
+                            <span>💨</span>
+                        </div>
+
+                        <span class="metrica-valor" id="valor-velocidade-vento">78.4%</span>
+
+                        <span class="metrica-rotulo">Umidade</span>
+                    </article>
+
+                    <article class="metrica-card">
+                        <div class="metrica-icone">
+                            <span>🧭</span>
+                        </div>
+
+                        <span class="metrica-valor" id="valor-direcao-vento">78.4%</span>
+
+                        <span class="metrica-rotulo">Direção do Vento</span>
+                    </article>
+                </div>
             </div>
         </div>
+
     </section>
 </body>
 </html>
