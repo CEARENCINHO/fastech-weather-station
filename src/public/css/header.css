@@ -1,17 +1,31 @@
 header{
-    /* border-bottom: 1px solid var(--color-gray); */
+    border-bottom: 1px solid var(--color-gray);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    /* desfoque */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition: border-color 0.3s ease;
 }
 header .principal{
+    
     margin: 0 auto;
     width: 388px;
-    height: 68px;
-    /* background-color: red; */
+
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 14px 0px;
+    padding: 13px 0px;
+    align-items: center;
+    
+    
     position: relative;
-    box-sizing: border-box;
-    /* border-bottom: 1px solid var(--color-gray); */
+    
 }
 
 
@@ -57,16 +71,22 @@ header .principal .button-options img {
     width: 16px;
 }
 
+
+/* menu */
 header .principal .navbar{
-    /* display: none; */
-    position: absolute;
-    top: 100%;
+    display: none;
     width: 98%;
-    border-bottom: 1px solid var(--color-gray);
 }
-header .principal .navbar a{
+
+
+header .principal .navbar.ativo{
     display: flex;
     flex-direction: column;
+
+    
+    
+}
+header .principal .navbar a{
     padding: 10px 16px;
     color: var(--color-gray);
     font-family: var(--font-inter);
@@ -74,4 +94,5 @@ header .principal .navbar a{
     line-height: 20px;
     text-decoration: none;
     font-size: 14px;
+
 }
