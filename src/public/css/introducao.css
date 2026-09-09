@@ -4,6 +4,10 @@
     width: 100vw;
     padding-top: 64px;
     padding-bottom: 94px;
+
+    /* teste tamanho da tela */
+    box-sizing: border-box;
+    height: 100vh;
 }
 
 .introducao .container{
