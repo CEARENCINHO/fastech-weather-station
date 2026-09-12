@@ -3,6 +3,7 @@
 
 @import url(header.css);
 @import url(introducao.css);
+@import url(ultima-medida.css);
 
 
 :root{
@@ -13,10 +14,13 @@
     --color-bg-footer: #080F1E;
     --color-yellow: #F97316;
     --color-gray: #94A3B8;
+    --color-gray-dark: #64748B;
+    --color-gray-more-dark: #475569;
     --color-blue-light: #1BD3D1;
     --color-blue-light-8: #1BD3D108;
     --color-blue-light-25: #1BD3D125;
     --colot-bg-blue-light: #0D2538;
+    --color-blue-dark: #3B82F6;
 
     /* tamanho de fontes */
     --weight-font-large: 800;
@@ -33,6 +37,11 @@
 body{
     padding-top: 68px;
     background-color: var(--color-bg-main);
+}
+
+.button-blue{
+    border: 1px solid var(--color-blue-light-25);
+    background-color: var(--color-blue-light-8);
 }
 
 @media (min-width: 768px) {
@@ -61,6 +70,18 @@ body{
         color: var(--color-blue-light);
         background-color: var(--colot-bg-blue-light);
         border-radius: 5px;
+    }
+
+
+    /* sessão ultima medida  */
+
+    .ultima-medida{
+        padding: 80px 24px;
+    }
+    
+    .ultima-medida .grid-metricas .card-metrica{
+        width: 32%;
+        /* min-width: 228px; */
     }
 }
 
