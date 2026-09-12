@@ -59,10 +59,10 @@
 }
 
 
-.introducao .container .part-1 .button .button-blue{
+/* .introducao .container .part-1 .button .button-blue{
     border: 1px solid var(--color-blue-light-25);
     background-color: var(--color-blue-light-8);
-}
+} */
 
 .introducao .container .part-1 .button .button-blue a{
     color: var(--color-blue-light);
