@@ -1,0 +1,133 @@
+.ultima-medida{
+    padding: 64px 16px;
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.ultima-medida .medicao-topo{
+    /* padding: 0 16px; */
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+.ultima-medida .medicao-topo .tagline{
+    color: var(--color-blue-light);
+    font-size: 11px;
+    font-weight: var(--weight-font-smell);
+    line-height: 16px;
+    letter-spacing: 1.68px;
+    font-family: var(--font-mono);
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.ultima-medida .linha-titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.ultima-medida .linha-titulo h2{
+    font-family: var(--font-Outfit);
+    font-weight: var(--weight-font-middle-large);
+    color: #fff;
+    font-size: 26px;
+    line-height: 38px;
+}
+
+.ultima-medida .linha-titulo time{
+    padding: 6px 12px;
+    border-radius: 15px;
+}
+
+.ultima-medida .linha-titulo #timenow{
+    font-family: var(--font-mono);
+    font-weight: var(--weight-font-smell);
+    font-size: 11px;
+    line-height: 16px;
+    color: var(--color-blue-light);
+}
+
+/* cards */
+
+.ultima-medida .grid-metricas{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.ultima-medida .grid-metricas .card-metrica{
+    background: var(--gradient-bg-color);
+    box-sizing: border-box;
+    width: calc((100% - 16px) / 2);
+    /* height: 146px; */
+    border-radius: 12px;
+    padding: 16px;
+
+
+    font-family: var(--font-inter);
+    font-weight: var(--weight-font-smell);
+    color: var(--color-gray-dark);
+    /* max-width: 228px; */
+}
+
+.ultima-medida .grid-metricas .card-metrica h3{
+    letter-spacing: 1.12px;
+    line-height: 16px;
+    font-size: 11px;
+}
+
+
+.ultima-medida .grid-metricas .card-metrica #icon{
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+
+.ultima-medida .grid-metricas .card-metrica h3{
+    margin-bottom: 4px;
+}
+
+
+.ultima-medida .grid-metricas .card-metrica p{
+    font-size: 11px;
+    line-height: 18px;
+    margin-bottom: 4px;
+}
+
+.ultima-medida .grid-metricas .card-metrica .dado{
+    font-family: var(--font-mono);
+    font-weight: var(--weight-font-middle);
+    font-size: 26px;
+    line-height: 26px;
+    color: red;
+}
+
+.ultima-medida .grid-metricas .card-metrica .card-rodape{
+    color: var(--color-gray-more-dark);
+    font-size: 11px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.ultima-medida .grid-metricas .card-border-red{
+    border: 1px solid rgba(249, 115, 22, 0.18);
+}
+
+
+.ultima-medida .grid-metricas .card-border-blue{
+    border: 1px solid rgba(34, 211, 238, 0.18);
+}
+
+
+.ultima-medida .grid-metricas .card-border-blue-dark{
+    border: 1px solid rgba(99, 102, 241, 0.18);
+}
+
+
+
