@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fastech | Previsão do tempo</title>
     <link rel="shortcut icon" href="img/favicon-fastechico.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/global.css">
-    <script src="js/script.js" defer></script>
+    <script src="js/script.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -23,16 +23,16 @@
                 <img src="img/list.svg" alt="">
             </button>
             <nav class="navbar">
-                <a href="">Medições</a>
-                <a href="">Histórico</a>
-                <a href="">Gráficos</a>
-                <a href="">Tecnologias</a>
-                <a href="">Sobre</a>
-                <a href="">Equipe</a>
+                <a href="#agora">Agora</a>
+                <a href="#ultimaMedicao">Ultima Medição</a>
+                <a href="#ultima24">Ultima 24 horas</a>
             </nav>
         </div>
     </header>
-    <section class="introducao">
+
+
+
+    <section class="introducao" id="agora">
         <div class="container">
             <div class="part-1">
                 <div class="introducao-infor">
@@ -42,10 +42,10 @@
     
                 <div class="button">
                     <button class="button-link button-yellow">
-                        <a href="" >Ultima Medição</a>
+                        <a href="#ultimaMedicao" >Ultima Medição</a>
                     </button>
                     <button class="button-link button-blue">
-                        <a href="" >Tabela</a>
+                        <a href="#ultima24" >Tabela</a>
                     </button>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                 </div>
 
                 <div class="tempo">
-                    <span class="temp">25.5º</span>
+                    <span class="temp" id="temperatura">--</span>
                     <p>Temperatura atual</p>
                 </div>
 
@@ -74,7 +74,7 @@
                             <span>💧</span>
                         </div>
 
-                        <span class="metrica-valor" id="valor-umidade">78.4%</span>
+                        <span class="metrica-valor"><span class="metrica-valor" id="umidade"></span> %</span>
 
                         <span class="metrica-rotulo">Umidade</span>
                     </article>
@@ -84,9 +84,9 @@
                             <span>💨</span>
                         </div>
 
-                        <span class="metrica-valor" id="valor-velocidade-vento">78.4%</span>
+                        <span class="metrica-valor" ><span class="metrica-valor" id="velocidade-vento"></span> km/h</span>
 
-                        <span class="metrica-rotulo">Umidade</span>
+                        <span class="metrica-rotulo">Velocidade do vento</span>
                     </article>
 
                     <article class="metrica-card">
@@ -94,7 +94,7 @@
                             <span>🧭</span>
                         </div>
 
-                        <span class="metrica-valor" id="valor-direcao-vento">78.4%</span>
+                        <span class="metrica-valor" id="direcaoVento">--</span>
 
                         <span class="metrica-rotulo">Direção do Vento</span>
                     </article>
@@ -105,13 +105,14 @@
     </section>
 
 
-    <section class="ultima-medida">
+
+    <section id="ultimaMedicao" class="sessao-container">
         <div class="medicao-topo">
             <span class="tagline">DADOS EM TEMPO REAL</span>
             <div class="linha-titulo">
                 <h2>Última medição</h2>
                 <time class="button-blue" datetime="2026-09-03T14:32:00">
-                    <span  id="timenow">58/45/2145 as 21:99</span>
+                    <span  id="timenow"></span>
                 </time>
             </div>
         </div>
@@ -122,11 +123,11 @@
                 <h3>TEMPERATURA</h3>
                 <p>
                     <!-- altera no JS -->
-                    <span id="temperatura" class="dado">25</span>
+                    <span id="temperatura" class="dado">--</span>
                     °C
                 </p>
                 <!-- alterar no js -->
-                <p class="card-rodape">Sensação: <span id="sensacaoTermica">28</span></p>
+                <p class="card-rodape"><span id="sensacaoTermica"></span></p>
             </article>
 
             <article class="card-metrica card-border-blue">
@@ -134,11 +135,11 @@
                 <h3>UMIDADE</h3>
                 <p>
                     <!-- altera no JS -->
-                    <span id="umidade" class="dado">73</span>
+                    <span id="umidade" class="dado umidade">--</span>
                     %
                 </p>
                 <!-- alterar no js -->
-                <p class="card-rodape"><span id="umidade">Alta</span></p>
+                <p class="card-rodape"><span id="statusumidade">--</span></p>
             </article>
 
             <article class="card-metrica card-border-blue-dark">
@@ -146,11 +147,11 @@
                 <h3>VENTO</h3>
                 <p>
                     <!-- altera no JS -->
-                    <span id="vento" class="dado">12.5</span>
+                    <span id="velocidade-vento" class="dado">--</span>
                     Km/h
                 </p>
                 <!-- alterar no js -->
-                <p class="card-rodape">Dir:<span id="dirVento">NE</span></p>
+                <p class="card-rodape" >Dir:<span style="color: #64748B;" id="direcaoVento"></span></p>
             </article>
 
             <article class="card-metrica card-border-blue-dark">
@@ -158,8 +159,8 @@
                 <h3>DIREÇÃO</h3>
                 <p>
                     <!-- altera no JS -->
-                    <span id="direcaoVento" class="dado">NE</span>
-                    <span id="direcaoVentoGraus">45</span>
+                    <span id="direcaoVento" class="dado">--</span>
+                    <span id="direcaoVentoGraus">--</span>
                 </p>
                 <!-- alterar no js -->
                 <p class="card-rodape"><span id="sensacaoTermica">Nordeste</span></p>
@@ -167,28 +168,78 @@
 
             <article class="card-metrica card-border-blue">
                 <span id="icon">🌧️</span>
-                <h3>PRECIPITAÇÃO</h3>
+                <h3>Iluminação</h3>
                 <p>
                     <!-- altera no JS -->
-                    <span id="temperatura" class="dado">25</span>
-                    °C
+                    <span id="iluminacao" style="font-size: 20px;" class="dado">--</span>
                 </p>
                 <!-- alterar no js -->
-                <p class="card-rodape">Sensação: <span id="sensacaoTermica">28</span></p>
+                <p class="card-rodape"><span id="sensacaoTermica"></span></p>
             </article>
 
             <article class="card-metrica card-border-red">
                 <span id="icon">📊</span>
-                <h3>Temperatura</h3>
+                <h3>Pressão</h3>
                 <p>
                     <!-- altera no JS -->
-                    <span id="temperatura" class="dado">25</span>
-                    °C
+                    <span id="pressao" class="dado">--</span>
+                    hPa
                 </p>
                 <!-- alterar no js -->
-                <p class="card-rodape">Sensação: <span id="sensacaoTermica">28</span></p>
+                <p class="card-rodape"><span id="statusPress">--</span></p>
             </article>
         </div>
     </section>
+
+
+
+    <section id="ultima24" class="sessao-container" style="border-top: 1px solid rgba(34, 211, 238, 0.08);">
+        <div class="medicao-topo">
+            <span class="tagline">HISTÓRICO DE HOJE</span>
+            <div class="linha-titulo">
+                <h2>Última 24 Horas</h2>
+            </div>
+        </div>
+
+
+        <div class="tabela-metrica-hora tabela-scroll tabela-metrica">
+            <table class="tabelaMetricaH" id="#tabela-metrica-h">
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Temp.</th>
+                        <th>Umidade</th>
+                        <th>Vento</th>
+                        <th>Dir. Vento</th>
+                        <th>Iluminação</th>
+                        <th>Condição do ceu</th>
+                        <th>Pressão</th>
+                    </tr>
+                </thead>
+
+                <tbody id="corpoTabelaMetrica">
+                    
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- <div class="tabela-metrica-dias">
+            <tr>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>T. Média</th>
+                        <th>T. Mín.</th>
+                        <th>T. Máx.</th>
+                        <th>Umidade</th>
+                        <th>Vento</th>
+                        <th>Dir. Vento</th>
+                        <th>Iluminação</th>
+                        <th>Condição do ceu</th>
+                    </tr>
+        </div> -->
+
+    </section>
+
 </body>
 </html>
