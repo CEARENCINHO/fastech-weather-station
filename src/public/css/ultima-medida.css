@@ -102,8 +102,24 @@
     font-weight: var(--weight-font-middle);
     font-size: 26px;
     line-height: 26px;
-    color: red;
 }
+
+.sessao-container .grid-metricas .card-metrica #temperatura, 
+.sessao-container .grid-metricas .card-metrica #pressao{
+    color: var(--color-yellow);
+}
+
+
+.sessao-container .grid-metricas .card-metrica #iluminacao,.sessao-container .grid-metricas .card-metrica #umidade{
+    color: var(--color-blue-light)
+}
+
+
+.sessao-container .grid-metricas .card-metrica #direcaoVento,
+.sessao-container .grid-metricas .card-metrica #velocidade-vento{
+    color: var(--color-blue-dark);
+}
+
 
 .sessao-container .grid-metricas .card-metrica .card-rodape{
     color: var(--color-gray-more-dark);
