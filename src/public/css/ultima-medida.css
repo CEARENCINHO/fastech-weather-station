@@ -2,6 +2,7 @@
     padding: 64px 16px;
     width: 100vw;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .ultima-medida .medicao-topo{
@@ -55,13 +56,13 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 16px;
 }
 
 .ultima-medida .grid-metricas .card-metrica{
     background: var(--gradient-bg-color);
     box-sizing: border-box;
-    width: 48%;
+    width: calc((100% - 16px) / 2);
     /* height: 146px; */
     border-radius: 12px;
     padding: 16px;
