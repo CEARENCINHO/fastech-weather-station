@@ -1,0 +1,31 @@
+.tabela-metrica-hora{
+    border-radius: 16px;
+}
+
+.tabelaMetricaH thead{
+    background-color: var(--color-bg-thead);
+}
+.tabelaMetricaH thead th{
+    padding: 14px 16px;
+    font-weight: var(--weight-font-tabela);
+    font-size: 11px;
+    letter-spacing: 0.9px;
+    line-height: 16px;
+    font-family: var(--font-mono);
+    color: var(--color-table-blue);
+    white-space: nowrap;
+}
+
+.tabela-metrica tbody th{
+    padding: 13px 16px;
+    font-size: 13px;
+    font-weight: var(--weight-font-smell);
+    color: var(--color-gray);
+    font-family: var(--font-mono);
+    background-color: var(--bg-card-color);
+    line-height: 20px;
+
+    text-align: center;      /* Horizontal */
+    vertical-align: middle;  /* Vertical */
+}
+
