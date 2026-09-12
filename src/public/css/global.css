@@ -80,8 +80,7 @@ body{
     }
     
     .ultima-medida .grid-metricas .card-metrica{
-        width: 32%;
-        /* min-width: 228px; */
+        width: calc((100% - (3 * 16px)) / 3);
     }
 }
 
@@ -113,11 +112,28 @@ body{
         margin: 0;
     }
 
+
+
+    /* sessão ultima medida  */
+
+    .ultima-medida{
+        padding: 80px 32px;
+    }
+
+
+    .ultima-medida .linha-titulo h2{
+        font-size: 32px;
+    }
+    
+    
+    .ultima-medida .grid-metricas .card-metrica{
+        width: calc((100% - (5 * 16px)) / 6);
+    }
     
 }
 
 @media (min-width: 1440px) {
-    header .principal, .introducao .container{
+    header .principal, .introducao .container, .ultima-medida{
         width: 1216px;
     }
     .introducao .container{
