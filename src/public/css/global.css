@@ -4,6 +4,7 @@
 @import url(header.css);
 @import url(introducao.css);
 @import url(ultima-medida.css);
+@import url(tabelas.css);
 
 
 :root{
@@ -21,12 +22,15 @@
     --color-blue-light-25: #1BD3D125;
     --colot-bg-blue-light: #0D2538;
     --color-blue-dark: #3B82F6;
+    --color-table-blue: #22D3EE;
+    --color-bg-thead: #102943;
 
     /* tamanho de fontes */
     --weight-font-large: 800;
     --weight-font-middle-large: 700;
     --weight-font-middle: 600;
     --weight-font-small: 400;
+    --weight-font-tabela: 500;
 
     /* fontes */
     --font-Outfit: 'Outfit', sans-serif;
@@ -34,13 +38,68 @@
     --font-inter: 'Inter', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
+    padding-top: 62px;
     background-color: var(--color-bg-main);
 }
 
 .button-blue{
     border: 1px solid var(--color-blue-light-25);
     background-color: var(--color-blue-light-8);
+}
+
+
+.tagline{
+    color: var(--color-blue-light);
+    font-size: 11px;
+    font-weight: var(--weight-font-smell);
+    line-height: 16px;
+    letter-spacing: 1.68px;
+    font-family: var(--font-mono);
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.linha-titulo h2{
+    font-family: var(--font-Outfit);
+    font-weight: var(--weight-font-middle-large);
+    color: #fff;
+    font-size: 26px;
+    line-height: 38px;
+}
+
+.tabela-scroll{
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: none;
+}
+
+/* CORES DA UMIDADE RELATIVA DO AR */
+.emergencia{
+    color: #9D00FF;
+}
+.alerta{
+    color: red;
+}
+.atencao{
+    color: orangered    ;
+}
+.moderada{
+    color: yellow;
+}
+.ideal{
+    color: green
+}
+.alta{
+    color: var(--color-blue-dark);
+}
+.saturada{
+    color: #3B82F6;
 }
 
 @media (min-width: 768px) {
@@ -72,13 +131,13 @@ body{
     }
 
 
-    /* sessão ultima medida  */
+    /* .sessao-container  */
 
-    .ultima-medida{
+    .sessao-container{
         padding: 80px 24px;
     }
     
-    .ultima-medida .grid-metricas .card-metrica{
+    .sessao-container .grid-metricas .card-metrica{
         width: calc((100% - (3 * 16px)) / 3);
     }
 }
@@ -124,26 +183,39 @@ body{
 
 
 
-    /* sessão ultima medida  */
+    /* .sessao-container  */
 
-    .ultima-medida{
+    .sessao-container{
         padding: 80px 32px;
     }
 
 
-    .ultima-medida .linha-titulo h2{
+    .sessao-container .linha-titulo h2{
         font-size: 32px;
     }
     
     
-    .ultima-medida .grid-metricas .card-metrica{
+    .sessao-container .grid-metricas .card-metrica{
         width: calc((100% - (5 * 16px)) / 6);
     }
+    /* tabela */
+
     
+    table {
+        width: 100%;
+        border-collapse: collapse; /* Remove espaçamentos extras entre bordas */
+        table-layout: fixed;       /* Garante que as colunas ocupem tamanhos proporcionais */
+    }   
+
+    /* Opcional: centralizar ou alinhar o conteúdo */
+    th, td {
+        text-align: center;
+        padding: 12px 8px;        /* Dá um respiro vertical sem estourar o card */
+    }
 }
 
 @media (min-width: 1440px) {
-    header .principal, .introducao .container, .ultima-medida{
+    header .principal, .introducao .container, .sessao-container{
         width: 1216px;
     }
     .introducao .container{
