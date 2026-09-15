@@ -131,9 +131,9 @@ async function carregarDados() {
             statusUmidade.textContent = 'Atenção'
         } else if (valorUmidade < 40) {
             statusPresstatusUmidade.textContent = 'Moderada / Seca'
-        } else if (valorUmidade < 70) {
+        } else if (valorUmidade < 70 ) {
             statusUmidade.textContent = 'Ideal / Conforto'
-        } else if (valorUmidade > 85) {
+        } else if (valorUmidade < 85) {
             statusUmidade.textContent = 'Alta / Abafado'
         }
         
