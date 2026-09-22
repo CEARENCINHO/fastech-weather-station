@@ -59,7 +59,8 @@ const tabela = document.querySelector('#corpoTabelaMetrica')
 async function carregarDados() {
     try{
 
-        const resposta = await fetch("http://localhost:3000/lerTabela")
+        //alterar o caminho para o IP local!
+        const resposta = await fetch("http://192.168.1.125:3000/lerTabela")
         // VERIFICAR STATUS DE CONEXÃO
         if (!resposta.ok){
             console.log('Não conctou ao banco de dados')
@@ -190,7 +191,7 @@ async function carregarDados() {
 
 
         // tabela do dia
-        for(let i = 0; i <= dado.length - 1; i += 5){
+        for(let i = 0; i <= dado.length - 1; i++){
             
             const dataHora = dado[i]["data_hora"]
             const [dataIso,horaIso] = dataHora.split('T')
