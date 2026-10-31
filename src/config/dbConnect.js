@@ -1,10 +1,10 @@
-import mysql from 'mysql2'
+import mongoose from 'mongoose';
 
-const conexao = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '93g@Fvk7fdc',
-    database: 'estacao_meteo'
-})
+async function conectDatabase() {
+    mongoose.connect(process.env.MONGODB_URI);
+    return mongoose.connection
+}
 
-export default conexao.promise()
+export default conectDatabase;
+
+// Configuração inicial para se conectar com o mongoBD 
