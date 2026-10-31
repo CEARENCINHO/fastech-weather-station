@@ -17,7 +17,7 @@ conexao.once("open", () => {
 const app = express()
 app.use(cors())
 app.use(express.json())
-router(app)
+app.use(router)
 
 
 
