@@ -21,6 +21,7 @@
     font-weight: var(--weight-font-large);
     color: #F1F5F9;
     margin-bottom: 24px;
+    padding-top: 64px;
 }
 
 .introducao div .introducao-infor h1 .font-blue{

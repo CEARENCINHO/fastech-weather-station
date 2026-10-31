@@ -60,7 +60,7 @@ async function carregarDados() {
     try{
 
         //alterar o caminho para o IP local!
-        const resposta = await fetch("http://192.168.1.125:3000/lerTabela")
+        const resposta = await fetch("http://172.20.10.7:3000/lerTabela")
         // VERIFICAR STATUS DE CONEXÃO
         if (!resposta.ok){
             console.log('Não conctou ao banco de dados')
@@ -149,7 +149,7 @@ async function carregarDados() {
         // card direção do vento
         dirVento.forEach(card => {
             const grau = parseFloat(dado[0]['direcao_vento'])
-            if (grau <= 22.5 || grau >= 337.5) {
+            if (grau < 22.5 || grau >= 337.5) {
                 card.textContent = 'N';
             } else if (grau < 67.5) {
                 card.textContent = 'NE';
@@ -163,7 +163,7 @@ async function carregarDados() {
                 card.textContent = 'SO';
             } else if (grau < 292.5) {
                 card.textContent = 'O';
-            } else if (grau >= 292.5) {
+            } else {
                 card.textContent = 'NO';
             }
         })
