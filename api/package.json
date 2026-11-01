@@ -1,0 +1,21 @@
+{
+  "name": "estacao-meteorologica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "servidorEstacao.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.2.1",
+    "mongodb": "^7.6.0",
+    "mongoose": "^7.3.4",
+    "mysql2": "^3.24.2"
+  }
+}
