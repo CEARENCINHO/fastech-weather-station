@@ -1,4 +1,4 @@
-import Metrica from '../model/Metrica.js';
+import Metrica from '../model/metrica.js';
 
 class metricaController{
     static async leitura(req,res){
